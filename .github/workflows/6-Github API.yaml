@@ -1,0 +1,19 @@
+name: 6- Github API
+
+on:
+    repository_dispatch:
+      types: [trigger-fetch-data] 
+ 
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: MySQL fetch
+        run: echo "I will retrieve data from MySQL"
+
+      - name: PostgreSQL fetch
+        run: echo "I will retrieve data from PostgreSQL."
+
+      - name: Done
+        run: echo "Done boy 😎"
