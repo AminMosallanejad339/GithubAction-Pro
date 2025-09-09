@@ -3,7 +3,7 @@ import boto3
 import logging
 import time
 from datetime import datetime
-import pytz 
+import pytz
 from botocore.exceptions import ClientError
 
 logging.basicConfig(level=logging.INFO)
@@ -20,7 +20,7 @@ def upload_files_from_directory(directory):
             aws_secret_access_key = secret_key
         )
 
-        bucket_name = 'githubactions-14030823'
+        bucket_name = 'GithubActions-Test'
         bucket = s3_resource.Bucket(bucket_name)
         bucket.create(ACL='public-read')
 
