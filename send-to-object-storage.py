@@ -20,7 +20,7 @@ def upload_files_from_directory(directory):
             aws_secret_access_key = secret_key
         )
 
-        bucket_name = 'GithubActions-Test'
+        bucket_name = 'mygithubactiontest-339339'
         bucket = s3_resource.Bucket(bucket_name)
         bucket.create(ACL='public-read')
 
@@ -43,3 +43,4 @@ def upload_files_from_directory(directory):
 # Specify the directory containing files to upload
 directory_path = './stage'  # Change this to your directory
 upload_files_from_directory(directory_path)
+
